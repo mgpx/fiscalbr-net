@@ -2,6 +2,7 @@
 using FiscalBr.Common.Sped;
 using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace FiscalBr.EFDContribuicoes
 {
@@ -141,6 +142,15 @@ namespace FiscalBr.EFDContribuicoes
 
             /// <summary>
             ///     Código da situação do documento fiscal, conforme a Tabela 4.1.2
+            ///00 Documento regular 
+            ///01 Escrituração extemporânea de documento regular 
+            ///02 Documento cancelado 
+            ///03 Escrituração extemporânea de documento cancelado 
+            ///04 NF-e ou CT-e – denegado 
+            ///05 NF-e ou CT-e - Numeração inutilizada 
+            ///06 Documento Fiscal Complementar 
+            ///07 Escrituração extemporânea de documento complementar 
+            ///08 Documento Fiscal emitido com base em Regime Especial ou Norma Específica
             /// </summary>
             [SpedCampos(6, "COD_SIT", "N", 2, 0, true, 2)]
             public int CodSit { get; set; }
